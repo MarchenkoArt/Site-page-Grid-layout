@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+
+.wrapper {
+	margin: 0 auto;
+}
+
+.first-screen {
+
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	overflow: hidden;
+
+	&__burger {
+		cursor: pointer;
+		position: relative;
+		z-index: 10;
+        width: 33px;
+        height: 35px;
+        display: block;
+        margin-left: 10px;
+        margin: 57px 0px 37px 0px;
+        transition: 0.5s;
+	}
+
+	&__burger:before, &__burger:after, &__burger span{
+		height: 3px;
+	   	width: 100%;
+	    position: absolute;
+	    background: #515758;
+	    -webkit-transition: all .25s ease;
+    	   -moz-transition: all .25s ease;
+    	    -ms-transition: all .25s ease;
+    	     -o-transition: all .25s ease;
+    	        transition: all .25s ease;
+	}
+
+	&__burger:before, :after {
+		content: '';
+	}
+
+	&__burger {
+		span {
+			top: 21px;
+		}	
+	}
+
+	&__burger:before {
+		top: 10px;
+	}
+
+	&__burger:after{
+		bottom: 0px;
+	}
+
+
+	&__burger.open-menu:before{
+		transform: rotate(45deg);
+    	top: 16px;
+    	-webkit-transition: all .25s ease;
+    	   -moz-transition: all .25s ease;
+    	    -ms-transition: all .25s ease;
+    	     -o-transition: all .25s ease;
+    	        transition: all .25s ease;
+	}
+
+	&__burger.open-menu:after{
+		transform: rotate(-45deg);
+    	bottom: 16px;
+    	-webkit-transition: all .25s ease;
+    	   -moz-transition: all .25s ease;
+    	    -ms-transition: all .25s ease;
+    	     -o-transition: all .25s ease;
+    	        transition: all .25s ease;
+	}
+
+	&__burger.open-menu span{
+		opacity: 0;
+		-webkit-transition: all .25s ease;
+    	   -moz-transition: all .25s ease;
+    	    -ms-transition: all .25s ease;
+    	     -o-transition: all .25s ease;
+    	        transition: all .25s ease;
+	}
+
+
+	&__image {
+		overflow: hidden;
+		background-size: cover;
+		background-position: left;
+	}
+	&__body {
+		position: relative;
+		background-color: #f3f3f3; 
+		padding: 0px 77px 0px 54px;
+	}
+
+	&__menu {
+		font-family: Roboto;
+		font-size: 30px;
+		position: absolute;
+		left: 100%;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #f3f3f3;
+		padding-top: 25%;
+		padding-left: 10%;
+		transition: all 0.6s ease;
+		overflow: auto;
+
+		li {
+			display: block;
+			position: relative;
+			padding-top: 15px;
+		}
+
+		a, a:visited, a:active {
+			color: #262f32;
+			transition: all 0.6s ease;
+		}
+		li:after {
+
+		}
+		a {
+		    position: relative;
+		    text-decoration: none;
+		    padding-bottom: 2px;
+		}
+		a:before {
+		    display: block;
+		    position: absolute;
+		    content: "";
+		    height: 3px;
+		    width: 0;
+		    background: #262f32;
+		    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+		    left: 50%;
+		    bottom: 0;
+		}
+
+		a:hover:before {
+		    width: 100%;
+		    left: 0;
+		}
+	}
+
+	&__menu.open-menu{
+		left: 0;
+	}
+
+	&__title {
+		font-family: Roboto;
+		font-size: 40px;
+		line-height: 57px;
+		font-weight: 300;
+		letter-spacing: 0.03em;
+		color: #262f32;
+		margin: 37px 0px 30px 0px;
+	}
+	&__text {
+		font-family: Roboto;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		color: #262f32;
+		margin: 30px 0px 0px 0px;
+
+		p {
+			margin: 0px 0px 35px 0px;
+		}
+	}
+}
+
+.span-bold {
+	font-weight: 700;
+}
+.span-medium {
+	font-weight: 400;
+}
+
+// Второй экран ===========================
+
+.title {
+	font-family: Roboto;
+	font-size: 45px;
+	line-height: 66px;
+	font-weight: 300;
+	letter-spacing: 0.03em;
+	padding: 75px 0px 19px 0px;
+
+	span {
+		font-weight: 900;
+	}
+}
+.second-text {
+	opacity: 0.87;
+	font-family: Roboto;
+	font-size: 15.6px;
+	line-height: 28px;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+	padding: 0px 0px 27px 0px;
+}
+.second-content {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.second-btn {
+	font-family: Roboto;
+	font-size: 17px;
+	line-height: 32px;
+	font-weight: 400;
+	letter-spacing: 0.03em;
+	padding: 12px 25px;
+	border: 1px solid;
+	border-radius: 15px;
+	cursor: pointer;
+	-ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+	-webkit-user-select: none;
+}
+
+.second-screen {
+	&__body {
+		min-height: 100vh;
+		display: grid;
+		overflow: hidden;
+		grid-template-columns: 1.5fr 2fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	&__block-1 {
+		grid-row: 1 / 3;
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		align-items: center;
+		z-index: 1;
+		color: #ffffff;
+		padding: 0px 95px 66px 50px;
+	}
+
+	&__block-1:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #1e92af;
+		opacity: .75;
+	}
+	&__block-2 {
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		align-items: center;
+		z-index: 1;
+		color: #262f32;
+		padding: 0px 162px 19px 54px;
+	}
+
+	&__block-2:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #fff4d2;
+		opacity: .91;
+	}
+	
+	&__block-3 {
+		position: relative;
+		background-size: cover;
+		align-items: center;
+		background-position: center;
+		z-index: 1;
+		color: #ffffff;
+		padding: 0px 162px 19px 54px;
+	}
+
+	&__block-3:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #162633;
+		opacity: .75;
+	}
+
+	&__block-1:hover {
+
+	}
+	&__block-2:hover {
+
+	}
+
+	&__block-3:hover {
+
+	}
+}
+
+.block-2 {
+	
+	&__button {
+		-webkit-transition: all .5s ease;
+		   -moz-transition: all .5s ease;
+		    -ms-transition: all .5s ease;
+		     -o-transition: all .5s ease;
+		        transition: all .5s ease;
+	}
+
+	&__button:hover{
+		color: #fff;
+		background-color: #222;
+		border-color: #222;
+		-webkit-transition: all .5s ease;
+		   -moz-transition: all .5s ease;
+		    -ms-transition: all .5s ease;
+		     -o-transition: all .5s ease;
+		        transition: all .5s ease;
+	}
+}
+
+.block-3 {
+
+	&__button {
+		-webkit-transition: all .5s ease;
+		   -moz-transition: all .5s ease;
+		    -ms-transition: all .5s ease;
+		     -o-transition: all .5s ease;
+		        transition: all .5s ease;
+	}
+
+	&__button:hover{
+		color: #000;
+		background-color: #fff;
+		border-color: #fff;
+		-webkit-transition: all .5s ease;
+		   -moz-transition: all .5s ease;
+		    -ms-transition: all .5s ease;
+		     -o-transition: all .5s ease;
+		        transition: all .5s ease;
+	}
+}
+
+
+
+
+
+// Блок с контактами ===========================
+
+
+.contact-screen {
+
+		min-height: 100vh;
+		display: grid;
+		overflow: hidden;
+		grid-template-columns: 1fr 2fr;
+		color: #ffffff;
+
+	&__autor {
+		position: relative;
+		background-size: cover;
+		align-items: center;
+		background-position: center;
+		z-index: 1;
+	}
+	&__autor:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #1d5367;
+		opacity: .75;
+		
+	}
+	&__hello {
+		position: relative;
+		background-size: cover;
+		align-items: center;
+		background-position: center;
+		z-index: 1;
+	}
+
+	&__hello:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #5a665f;
+		opacity: .5;
+		
+	}
+}
+.autor {
+	&__content {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		padding-left: 48px;
+	}
+
+	&__title {
+		margin-bottom: 95px;
+	}
+	&__logo {
+		margin-top: 95px;
+	}
+	&__name {
+		font-family: Roboto;
+		font-size: 42px;
+		line-height: 66px;
+		font-weight: 900;
+		letter-spacing: 0.03em;
+	}
+	&__profession {
+		display: grid;
+		font-family: Roboto;
+		font-size: 16.6px;
+		line-height: 66px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+	}
+}
+.hello {
+	&__content {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+		padding: 0px 57px;
+	}
+
+	&__form {
+
+		max-width: 619px;
+
+		input {
+			width: 304px;
+			height: 57px;
+			border: 1px solid #ffffff;
+			border-radius: 10px;
+			padding: 10px 20px 10px 28px;
+			outline: none;
+			background: transparent;
+
+			font-family: Roboto;
+			font-size: 16.6px;
+			line-height: 32px;
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			color: #ffffff;
+			margin-bottom: 7px;
+		}
+
+		textarea{
+			width: 619px;
+			height:150px;
+			resize: none;
+			padding:15px;
+			background: transparent;
+			border-radius:15px;
+			border: 1px solid #ffffff;
+			outline: none;
+			margin-top: 7px;
+			margin-bottom: 47px;
+			
+
+			font-family: Roboto;
+			font-size: 16.6px;
+			line-height: 32px;
+			font-weight: 400;
+			letter-spacing: 0.03em;
+			color: #ffffff;
+		}
+			::-webkit-input-placeholder {			
+				font-family: Roboto;
+				font-size: 16.6px;
+				line-height: 32px;
+				font-weight: 400;
+				letter-spacing: 0.03em;
+				color: #c9c9c9;
+			}
+			::-moz-placeholder {			
+				font-family: Roboto;
+				font-size: 16.6px;
+				line-height: 32px;
+				font-weight: 400;
+				letter-spacing: 0.03em;
+				color: #c9c9c9;
+
+			}
+			:-moz-placeholder {			
+				font-family: Roboto;
+				font-size: 16.6px;
+				line-height: 32px;
+				font-weight: 400;
+				letter-spacing: 0.03em;
+				color: #c9c9c9;
+
+			}
+			:-ms-input-placeholder {			
+				font-family: Roboto;
+				font-size: 16.6px;
+				line-height: 32px;
+				font-weight: 400;
+				letter-spacing: 0.03em;
+				color: #c9c9c9;
+			}
+	}
+
+	&__name {
+		margin-right: 3px;
+	}
+	&__Email {
+		margin-left: 3px;
+	}
+
+	&__text-connect {
+		font-family: Roboto;
+		font-size: 16.6px;
+		line-height: 32px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		margin-top: 47px;
+		margin-bottom: 11px;
+	}
+	&__contact {
+		margin-top: 11px;
+		margin-bottom: 25px;
+	}
+	&__contact-icon {
+		position: relative;
+		padding: 3px;
+	}
+
+
+
+	&__contact-icon:before {
+		content: "";
+		position: absolute;
+		top: 4px;
+		left: 3px;
+		width: 44px;
+		height: 45px;
+		opacity: 0;
+		background: rgb(255,255,255);
+		background: linear-gradient(40deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9374124649859944) 50%, rgba(255,255,255,0) 100%);
+		border-radius: 7px;
+		-webkit-transition:.5s;
+		   -moz-transition:.5s;
+		    -ms-transition:.5s;
+		     -o-transition:.5s;
+		        transition:.5s;
+	}
+
+	&__contact-icon:hover:before{
+		-webkit-transition:.5s;
+		   -moz-transition:.5s;
+		    -ms-transition:.5s;
+		     -o-transition:.5s;
+		        transition:.5s;
+		        opacity: 0.4;
+	}
+	
+
+	&__request {
+		font-family: Roboto;
+		font-size: 16.6px;
+		line-height: 32px;
+		font-weight: 400;
+		letter-spacing: 0.03em;
+		margin-top: 25px;
+	}
+}
